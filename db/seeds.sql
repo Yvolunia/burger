@@ -1,4 +1,4 @@
-USE burger_db;
+USE uam75vznfduumauk;
 
 INSERT INTO burgers (burger_name)
 VALUES ("hamburger");
