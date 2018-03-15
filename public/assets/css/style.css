@@ -1,5 +1,23 @@
-<!-- BEGIN CSS -->
+
 
 body {
 	background:  #ffcc66;
+}
+
+.burger_image {
+	align-content: center;
+}
+
+ol {
+	margin-left: 100px;
+	float: left;
+}
+
+ul {
+	margin-right: 100px;
+	float: right;
+}
+
+.create-form {
+	align-content: center;
 }
