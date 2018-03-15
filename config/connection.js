@@ -1,13 +1,14 @@
 var mysql = require('mysql');
+var key = require('./key.js');
 var connection;
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: '',
-    user: '',
-    password: '',
+    host: key.mysql.host,
+    user: key.mysql.user,
+    password: key.mysql.password,
     database: 'uam75vznfduumauk'
   });
 };
