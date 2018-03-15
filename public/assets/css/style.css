@@ -4,20 +4,34 @@ body {
 	background:  #ffcc66;
 }
 
-.burger_image {
-	align-content: center;
+#burger_image {
+	margin-top: 50px;
+	margin-left: 600px;
+}
+
+h1{
+	margin-top: 25px;
+	margin-left: 600px;
 }
 
 ol {
 	margin-left: 100px;
-	float: left;
 }
 
 ul {
 	margin-right: 100px;
-	float: right;
 }
 
 .create-form {
-	align-content: center;
+	margin-left: 650px;
+}
+
+#submit {
+	margin-top: 25px;
+	margin-left: 40px;
+}
+
+#comment {
+	margin-top: 25px;
+	margin-left: 525px;
 }
