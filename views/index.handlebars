@@ -10,15 +10,34 @@
 <ol>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burgers-block devoured=false}}
+
+<li>
+  {{name}}
+
+  <button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
+    {{#if devoured}}{{/if}}
+  </button>
+
+  <button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
+</li>
+
     {{/unless}}
   {{/each}}
 </ol>
 
 <ul>
+<li>
+  {{name}}
+
+  <button class="change-" data-id="{{id}}" data-newsleep="{{sleep}}">
+    {{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
+  </button>
+
+  <button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
+</li>
+
   {{#each burgerss}}
     {{#if devoured}}
-      {{> burgers/burgers-block devoured=true}}
     {{/if}}
   {{/each}}
 </ul>
