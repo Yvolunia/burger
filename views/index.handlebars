@@ -1,7 +1,7 @@
 
 
  <div id="burger_image"> 
-          <img width=200 height=150 src="./public/assets/images/burger.jpg">
+          <img width=200 height=150 src="/assets/images/burger.jpg">
           
 </div>
 
@@ -26,17 +26,8 @@
 </ol>
 
 <ul>
-<li>
-  {{name}}
 
-  <button class="change-" data-id="{{id}}" data-newsleep="{{sleep}}">
-    {{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
-  </button>
-
-  <button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-</li>
-
-  {{#each burgerss}}
+  {{#each burgers}}
     {{#if devoured}}
     {{/if}}
   {{/each}}
