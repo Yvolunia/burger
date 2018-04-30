@@ -7,18 +7,18 @@
 
 <h1>Eat-Da-Burger!</h1>
 
-<ol>
+<ul>
   {{#each burgers}}
     {{#unless devoured}}
 
 <li>
-  {{name}}
+  {{this.id}}. {{this.burger_name}}
 
   <button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
     {{#if devoured}}{{/if}}
   </button>
 
-  <button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
+  <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
 </li>
 
     {{/unless}}
@@ -27,8 +27,8 @@
 
 <ul>
 
-  {{#each burgers}}
-    {{#if devoured}}
+  {{#each burger_data}}
+    {{#if this.devoured}}
     {{/if}}
   {{/each}}
 </ul>
