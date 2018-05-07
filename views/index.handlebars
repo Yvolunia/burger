@@ -1,15 +1,13 @@
-
-
- <div id="burger_image"> 
+<div class="container">
+	  <div class="row">  
+       <div class="col-xs-12 text-center" id="top-bar">
           <img width=200 height=150 src="/assets/images/burger.jpg">
-          
-</div>
-
-<h1>Eat-Da-Burger!</h1>
+           <h1>Eat-Da-Burger!</h1>
+        </div>
 
 <div class="col-xs-6 text-center" class="task">
 	<div class="row">
-  {{#each burger_name}}
+  {{#each burger_data}}
     {{#unless this.devoured}}
     <div class="col-xs-9 text-center">
         <pre>{{this.id}}. {{this.burger_name}}</pre>
@@ -25,13 +23,18 @@
    </div>
 </div>
 
-<div class="col-xs-6 text-center" class="task"></div>
-   {{#each burger_name}}
+<div class="col-xs-6 text-center" class="task">
+  <div class="row">
+   {{#each burger_data}}
       {{#if this.devoured}}
+      <div class="col-xs-9 text-center">
          <input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+      </div>
 				{{/if}}
 			  {{/each}}
 		</div>
+  </div>
+</div>
 
   <div class="container">
 	<div class="row">
@@ -40,40 +43,7 @@
 				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
 				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
 			</form>
-			<p>Enter a burger you want to eat Click the "Submit" button.</p>
+			<p>Enter a burger you want to eat. Then click the "Submit" button.</p>
 		</div>
 	</div>
-</div>
-
-{{!-- 
-  <button class="change-devoured" data-id="{{id}}" data-newsleep="{{devoured}}">
-    {{#if devoured}}{{/if}}
-  </button>
-
-  <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
-</li> --}}
-
-    {{!-- {{/unless}}
-  {{/each}}
-</ol>
-
-<ul>
-
-  {{#each burger_data}}
-    {{#if this.devoured}}
-    {{/if}}
-  {{/each}}
-</ul>
-
-<form class="create-form">
-
-<div class="form-group">
-<input type="text" id="ca" name="burger_name">
-</div>
-
-<button id="submit" type="submit">Submit</button>
-</form>
-
-<div id="comment"> --}}
-   <p>Enter a burger that you want to eat. Click the "Submit" button.</p>
 </div>
